@@ -43,22 +43,11 @@
 )
 
 
-(define MyCons
-    (lambda (l1 l2)
-        (let loop ((l1 (Reverse l1)) (l2 l2))
-            (if (null? l1) l2
-                (loop (cdr l1) (cons (car l1) l2))
-            )
-        )
-    )
-)
-
-
 (define QuickSort
     (lambda (l)  
         (let loop ((l l))
             (if (or (null? l) (null? (cdr l))) l
-                (MyCons (loop (MakeListLess l (car l))) (loop (MakeListMore l (car l))))
+                (append (loop (MakeListLess l (car l))) (loop (MakeListMore l (car l))))
             )
         )
     )
