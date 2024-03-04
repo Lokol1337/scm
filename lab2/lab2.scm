@@ -15,6 +15,7 @@
     )
 )
 
+
 (define MakeListLess
     (lambda (l P)
         (let loop ((l l) (P P) (res `()))
@@ -30,14 +31,15 @@
     )
 )
 
+
 (define Reverse 
- (lambda (l)
-  (let loop ((l l) (res '()))
-    (if (null? l) res
-      (loop (cdr l) (cons (car l) res))
+    (lambda (l)
+        (let loop ((l l) (res '()))
+            (if (null? l) res
+                (loop (cdr l) (cons (car l) res))
+            )
+        )
     )
-  )
- )
 )
 
 
@@ -50,6 +52,7 @@
         )
     )
 )
+
 
 (define QuikSort
     (lambda (l)  
