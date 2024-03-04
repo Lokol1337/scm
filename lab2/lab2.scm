@@ -54,7 +54,7 @@
 )
 
 
-(define QuikSort
+(define QuickSort
     (lambda (l)  
         (let loop ((l l))
             (if (or (null? l) (null? (cdr l))) l
@@ -65,5 +65,5 @@
 )
 
 
-(format #t "~a" (QuikSort data))
+(format #t "~a" (QuickSort data))
 
